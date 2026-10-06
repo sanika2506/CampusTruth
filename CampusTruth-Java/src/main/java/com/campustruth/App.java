@@ -1,6 +1,5 @@
 package com.campustruth;
 
-import com.campustruth.evidence.Evidence;
 import com.campustruth.evidence.EvidenceFactory;
 import com.campustruth.exception.InvalidRumorException;
 import com.campustruth.model.*;
@@ -41,6 +40,7 @@ public class App extends Application {
         Button save=new Button("Submit rumor"); save.setOnAction(e->{try{if(title.getText().isBlank()||claim.getText().isBlank())throw new InvalidRumorException("Title and claim are required");rumors.add(new Rumor(IdGenerator.nextRumorId(),title.getText().trim(),claim.getText().trim(),cat.getValue(),source.getValue(),"Demo Student"));storage.save(rumors);title.clear();claim.clear();refresh();showInfo("Rumor saved to CSV files.");}catch(InvalidRumorException|IOException ex){showError(ex.getMessage());}});
         VBox v=new VBox(9,new Label("Title"),title,new Label("Exact claim"),claim,new Label("Category"),cat,new Label("Source"),source,save);v.setPadding(new Insets(20));return v;
     }
+    @SuppressWarnings("unchecked")
     private VBox feedTab(){
         table=new TableView<>(); table.setItems(FXCollections.observableArrayList(rumors));
         table.getColumns().addAll(col("ID","id",80),col("Title","title",260),col("Category","category",150),col("Status","status",150),col("Author","author",120));
