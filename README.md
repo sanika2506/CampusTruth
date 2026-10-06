@@ -1,0 +1,2 @@
+# CampusTruth
+Campus truth detector
