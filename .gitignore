@@ -1,0 +1,19 @@
+# Maven build output
+target/
+**/target/
+*.class
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Runtime data
+campustruth-data/
