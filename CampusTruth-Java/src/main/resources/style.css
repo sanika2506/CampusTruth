@@ -1,0 +1,5 @@
+.root { -fx-font-family: 'Arial'; -fx-background-color: #f7fbf9; }
+.button { -fx-background-color: #1c7465; -fx-text-fill: white; -fx-background-radius: 6; -fx-padding: 8 14; }
+.label { -fx-text-fill: #17324d; }
+.text-field, .text-area, .combo-box { -fx-background-radius: 5; -fx-border-color: #dbe7e2; }
+.table-view { -fx-border-color: #dbe7e2; }
