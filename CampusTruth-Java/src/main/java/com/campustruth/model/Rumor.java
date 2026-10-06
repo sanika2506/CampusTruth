@@ -20,4 +20,5 @@ public class Rumor {
     public String getId(){return id;} public String getTitle(){return title;} public String getClaim(){return claim;}
     public String getCategory(){return category;} public String getSource(){return source;} public String getAuthor(){return author;}
     public String getCreatedAt(){return createdAt;} public RumorStatus getStatus(){return status;}
+    @Override public String toString(){return "[" + id + "] " + title;}
 }
